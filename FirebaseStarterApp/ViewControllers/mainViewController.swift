@@ -63,7 +63,7 @@ let db = Firestore.firestore()
         let dic = item[0]  as! NSManagedObject
         
         let email = dic.value(forKey: "email" ) as? String ?? "default"
-        
+        print("hey")
         let db = Firestore.firestore()
         db.collection("users").whereField("email", isEqualTo: email)
             .getDocuments() { (querySnapshot, err) in
